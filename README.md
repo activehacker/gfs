@@ -23,3 +23,21 @@
 详细内容
 ----------------
 详细内容介绍提示信息。
+
+
+相关资源
+--------
+### 图片显示示例
+1. [Github标识-内链接](http://example.com/ "悬停文字显示信息")
+    * ![图片1](http://github.com/unicorn.png "图片说明信息")
+2. [Github标识-外链接][link]
+    - [![画片2][image]](https://github.com/)
+
+  [link]: http://example.com/ "悬停文字显示信息"
+  [image]: http://github.com/github.png "图片说明信息"
+
+### 引用、级联引用
+> 一级引用。
+> 
+> > 二级引用通过再加一个 `>` 来表示
+> > 换行、二级引用。
