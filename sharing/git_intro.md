@@ -4,12 +4,12 @@ Git Introduction
 Setup Guide from Github
 -------------------------
 
-[Windows Setup Git](http://help.github.com/win-set-up-git/)
+* [Windows Setup Git](http://help.github.com/win-set-up-git/)
 
-> [git for windows download](http://code.google.com/p/msysgit/downloads/list)
+	> [git for windows download](http://code.google.com/p/msysgit/downloads/list)
 
-[Mac Setup Git](http://help.github.com/mac-set-up-git/)
-[Linux Setup Git](http://help.github.com/linux-set-up-git/)
+* [Mac Setup Git](http://help.github.com/mac-set-up-git/)
+* [Linux Setup Git](http://help.github.com/linux-set-up-git/)
 
 
 The Key Steps
