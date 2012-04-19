@@ -69,20 +69,13 @@ form = Renderer.getCompoent($html.find("#editEmailForm"));
 In practice, the second solution works.
 
 ### 4. null vs undefined
-1. JavaScript contains a small set of data types. It has the three primitive types boolean, number, and string and the special values null and undefined. Everything else is variations on the object type.
-
-2.  JavaScript treats false, null, undefined, "" (the empty string), and the number 0 as false. All other values are treated as true.
-
-3. The && operator is commonly called logical and. It can also be called guard. If the first operand is false, null, undefined, "" (the empty string), or the number 0 then it returns the first operand. Otherwise, it returns the second operand. This provides a convenient way to write a null-check:
-
-```javascript
-var value = p && p.name; /* The name value will only be retrieved from p if p has a value, avoiding an error. */
-```
-
 ```javascript
 alert(typeof null)​; //Object
 alert(typeof undefined)​;​ //undefined
 ```
+JavaScript有一个布尔类型，可能的值是true和false（两个都是关键字）。通过如下的规则，任何值都可以被转换成布尔型：
+false, 0, 空字串(""), NaN, null, 和undefined 都被转换为 false, 其他值会被转换为 true。
+你可以使用函数Boolean()来进行明确的转换：
 
 ```javascript
 alert(Boolean(""));//false
