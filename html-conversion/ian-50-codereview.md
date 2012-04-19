@@ -66,7 +66,45 @@ or
 form = Renderer.getCompoent($html.find("#editEmailForm"));
 ```
 
+In practice, the second solution works.
+
 ### 4. null vs undefined
+```javascript
+alert(typeof null)​; //Object
+alert(typeof undefined)​;​ //undefined
+```
+JavaScript有一个布尔类型，可能的值是true和false（两个都是关键字）。通过如下的规则，任何值都可以被转换成布尔型：
+false, 0, 空字串(""), NaN, null, 和undefined 都被转换为 false, 其他值会被转换为 true。
+你可以使用函数Boolean()来进行明确的转换：
+
+```javascript
+alert(Boolean(""));//false
+alert(Boolean(234));//true
+```
+
 ### 5. == vs ===
+[Why is comparing with just "!=" not good enough?](http://bytes.com/topic/javascript/answers/600166-why-comparing-just-not-good-enough)
+
+* exmaple 1:
+
+```javascript
+var x = undefined;
+alert( x == null ) // shows true
+alert( x === null ) // shows false
+```
+It depends on whether you want x to be equivalent to null or *exactly*
+null. It's called the strict equality operator for a reason! :-)
+
+* exmaple 2
+```javascript
+var x = undefined;
+var x = getNumberOrNull();
+if (x != null) {
+
+}
+```
+In this example, getNumberOrNull() could return zero. Zero and null
+both evaluate to false
+
 ### 6. CSS basic concept
 [CSS 1](http://fridayu.sinaapp.com/)
