@@ -56,7 +56,16 @@ $('body').scrollTop(0);
 
 ### Inhencement TODO: Automatically scoll to the first field with error
 
-### 3. null vs undefined
-### 4. == vs ===
-### 5. CSS basic concept
+### 3 How to get form component
+```javascript
+form = new Form($html.find("#editEmailForm"));
+```
+or
+```javascript
+form = Renderer.getCompoent($html.find("#editEmailForm"));
+```
+
+### 4. null vs undefined
+### 5. == vs ===
+### 6. CSS basic concept
 [CSS 1](http://fridayu.sinaapp.com/)
