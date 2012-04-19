@@ -61,6 +61,7 @@ $('body').scrollTop(0);
 form = new Form($html.find("#editEmailForm"));
 ```
 or
+
 ```javascript
 form = Renderer.getCompoent($html.find("#editEmailForm"));
 ```
