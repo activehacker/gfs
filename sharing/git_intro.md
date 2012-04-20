@@ -98,9 +98,24 @@ $ git status
 #view history
 $ git log
 
+#Revert your changes
+#undoing local changes (before staging)
+$ git checkout master
+
+#undoing local changes (before commiting)
+$ git add .
+$ git reset HEAD
+$ git checkout master
+
+#undoing committed changes
+$ git add .
+$ git commit -m "your comments"
+$ git revert HEAD
 
 
-#
+#push to repository
+$ git push
+```
 
 
 
