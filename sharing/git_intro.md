@@ -22,14 +22,31 @@ The Key Steps
 
 Take our gfs repository as a example
 
+**for creator** , after create repository from Github, 
+
+```bash
+#initialize the project from local   	-> local
+$ mkdir ~/gfs
+$ cd ~/gfs
+$ git init
+$ touch README
+
+#make some changes and first commit  	-> index
+$ git add README
+$ git commit -m 'first commit'
+
+#link to remote repository				-> remote
+$ git remote add origin git@github.com:activehacker/gfs.git
+$ git push -u origin master
+```
+
+**for user**
+
 ```bash
 $ git clone git@github.com:activehacker/gfs.git
 $ cd gfs
-```
 
-Make some changes then
-
-```bash
+# Make some changes then
 $ git add .
 $ git commit -m "Your comments"
 $ git push
