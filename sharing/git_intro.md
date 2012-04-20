@@ -118,5 +118,10 @@ $ git push
 ```
 
 
+[Resources]
+
+1. [Git简易指南](http://rogerdudler.github.com/git-guide/index.zh.html)
+2. [Github Help Page](http://help.github.com/) including lots of resources about Git、Github
+
 
 
