@@ -11,6 +11,8 @@ Setup Guide from Github
 * [Mac Setup Git](http://help.github.com/mac-set-up-git/)
 * [Linux Setup Git](http://help.github.com/linux-set-up-git/)
 
+Advantage of git
+-------------------------
 
 The Key Steps
 
@@ -31,7 +33,7 @@ $ cd ~/gfs
 $ git init
 $ touch README
 
-#make some changes and first commit  	-> index
+#make some changes and first commit  	-> index/staging area
 $ git add README
 $ git commit -m 'first commit'
 
@@ -51,3 +53,55 @@ $ git add .
 $ git commit -m "Your comments"
 $ git push
 ```
+
+
+Configuration
+--------------------------
+
+```bash
+#where is git configuration file
+$ cat .gitconfig 
+$ cat ~/.gitconfig  
+
+#how can we change the configuration
+$ git config --global user.name "jexchan"
+$ git config --global user.email "jexchan@gmail.com"
+
+#Make alias for convenience
+$ git config --global alias.co checkout
+
+#Ignoring files
+$ cat ./gitignore
+$ cat ~/.gitignore_global
+```
+
+Please refer to [A Collection of Useful .gitignore Templates](https://github.com/github/gitignore)
+
+
+Daily steps
+----------------------------
+
+```bash
+#check the status after making changes
+$ git status
+
+#staging changes
+$ git add .
+$ git status
+
+#commit your changes
+$ git commit -m "your comments"
+$ git status
+
+#repeat this steps
+
+#view history
+$ git log
+
+
+
+#
+
+
+
+
