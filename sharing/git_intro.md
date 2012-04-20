@@ -93,6 +93,9 @@ $ git status
 $ git commit -m "your comments"
 $ git status
 
+#or (automatically stage all tracked, modified files before the commit)
+$ git commit -am "your comments"
+
 #repeat this steps
 
 #view history
@@ -115,6 +118,10 @@ $ git revert HEAD
 
 #push to repository
 $ git push
+
+
+#view log history
+$ git log --oneline --graph
 ```
 
 
@@ -122,9 +129,10 @@ Resources
 ----------------------
 
 1. [Git简易指南](http://rogerdudler.github.com/git-guide/index.zh.html)
-2. [Github Help Page](http://help.github.com/) including lots of resources about Git、Github
+2. [Git Cheat Sheets](http://help.github.com/git-cheat-sheets//) 
 3. [Pro Git](http://progit.org/) Git open source book
 4. [Git Tips and Tricks](http://gitready.com/)
+5. [The Git Community Book](http://book.git-scm.com/)
 
 
 
