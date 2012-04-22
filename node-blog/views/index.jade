@@ -1,0 +1,10 @@
+h1= title
+p Welcome to #{title}
+
+#articles
+  - each article in articles
+    div.article
+      div.create_at= article.created_at
+      div.title
+        a(href="/blog/"+article._id)!= article.title
+      div.body= article.body
