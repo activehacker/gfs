@@ -24,7 +24,9 @@ ArticleProvider.prototype.findById = function(id, callback){
 ArticleProvider.prototype.save = function(articles, callback){
 	var article = null;
 
-	if ( typeof(articles.length) == 'undefined') {
+	console.log('articles.length:' + typeof(articles.length));
+
+	if ( typeof(articles.length) === 'undefined') {
 		articles = [articles];
 	}
 

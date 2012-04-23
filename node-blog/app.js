@@ -32,12 +32,28 @@ articleProvider.save([
     {title: 'Post three', body: 'Body three'}
   ], function(error, articles){});
 
+//--------- routes ----------//
 app.get('/', function(req, res){
   articleProvider.findAll(function(error, docs){
     res.render('index', {
-        title: 'blog',
+        title: "Ian's Blog",
         articles: docs
     });
+  });
+});
+
+app.get('/blog/new', function(req, res){
+  res.render('blog_new', {
+    title: 'New Blog'
+  });
+});
+
+app.post('/blog/new', function(req, res){
+  articleProvider.save({
+      title: req.param('title'),
+      body: req.param('body')
+  }, function(error, docs){
+    res.redirect('/');
   });
 });
 
