@@ -1,10 +1,11 @@
 
 var express = require('express');
 var ArticleProvider = require('./articleprovider-memory').ArticleProvider;
+//var ArticleProvider = require('./articleprovider-mongodb').ArticleProvider;
 
 var app = module.exports = express.createServer();
 
-app.configure(function(){
+app.configure(function() {
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.bodyParser());
@@ -23,6 +24,8 @@ app.configure('product', function(){
 });
 
 var articleProvider = new ArticleProvider();
+//var articleProvider = new ArticleProvider('localhost', 27017);
+
 
 console.log('save three dummy data in memory!');
 
@@ -34,6 +37,7 @@ articleProvider.save([
 
 //--------- routes ----------//
 app.get('/', function(req, res){
+  console.log('node routes /:');
   articleProvider.findAll(function(error, docs){
     res.render('index', {
         title: "Ian's Blog",
