@@ -1,0 +1,5 @@
+- each post in posts
+  .page-header
+    h1
+      a(href="/post/#{post.id}")= post.title
+  .content!=post.body

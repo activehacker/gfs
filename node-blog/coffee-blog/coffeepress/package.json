@@ -1,0 +1,15 @@
+{
+    "name": "coffeepress"
+  , "description": "Wordpress clone written in coffeescript!"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.8"
+    , "jade": ">= 0.0.1"
+  }
+  , "dependencies": {
+  	  "mocha": "0.10.0"
+  	, "should": "0.5.1"
+    , "mongoose": "2.4.10"
+  }
+}

@@ -1,0 +1,31 @@
+posts = []
+
+module.exports =
+  index: (req, res) ->
+    res.render "index",
+      title: "My Coffeepress Blog"
+      posts: posts
+
+  newPost: (req, res) ->
+  	res.render "add_post",
+  	  title: "Write new post"
+  
+  addPost: (req, res) ->
+    post = req.body.post
+    post.id = posts.length
+    console.log '------------- add post ---------'
+    console.log '--> id:' + post.id
+    console.log 'get post title:' + post.title
+    console.log 'get post body:' + post.body
+    posts.push post
+    res.redirect "/"
+
+  viewPost: (req, res) ->
+  	post = posts[req.params.id]
+  	console.log '--------- view post -------------'
+  	console.log '--> id:' + post.id
+  	console.log 'get post title:' + post.title
+  	console.log 'get post body:' + post.body
+  	res.render "post",
+  	  post: post
+  	  title: post.title
