@@ -121,6 +121,7 @@ both evaluate to false
 
 ### 1. Initialize JQuery objects and Arch components in different location
 1. Initialize JQuery objects after locale parse, before render complete
+
 ```javascript
 html = active.localize.parse(html);
 var $html = $(html);
