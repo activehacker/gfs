@@ -116,3 +116,21 @@ both evaluate to false
 
 ### 6. CSS basic concept
 [CSS 1](http://fridayu.sinaapp.com/)
+
+## Sprint 52
+
+### 1. Initialize JQuery objects and Arch components in different location
+1. Initialize JQuery objects after locale parse, before render complete
+```javascript
+html = active.localize.parse(html);
+var $html = $(html);
+
+var $paymentAccountSettingsContent = $html.find('#paymentAccountSettingsContent'); 
+var $editPrimaryAccountContentHeader = $html.find('#editPrimaryAccountContentHeader');
+var $addAccountContentHeader = $html.find('#addAccountContentHeader');
+```
+2. Initialize Arch components after render complete
+```javascript
+form = active.getComponent($html.find('#paymentAccountForm'));
+accountNameInput = active.getComponent($html.find('#accountNameInput'));
+```
