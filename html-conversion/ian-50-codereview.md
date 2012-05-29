@@ -130,6 +130,7 @@ var $editPrimaryAccountContentHeader = $html.find('#editPrimaryAccountContentHea
 var $addAccountContentHeader = $html.find('#addAccountContentHeader');
 ```
 2. Initialize Arch components after render complete
+
 ```javascript
 form = active.getComponent($html.find('#paymentAccountForm'));
 accountNameInput = active.getComponent($html.find('#accountNameInput'));
