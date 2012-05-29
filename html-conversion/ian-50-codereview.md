@@ -161,6 +161,14 @@ return;
 
 ### 3. Strictly equlity
 ```javascript
+if (routingNumberDigitsSum == 0) {
+	return false;
+}
+
+if (bankCountry == "US" && !isUnitedStatesRoutingNumber(routingNumber)) { ...
+```
+
+```javascript
 0            ==   ""            // true
 0            ==   "0"           // true
 false        ==   "0"           // true
@@ -180,3 +188,4 @@ null         ===   undefined     // false
 ```
 * The above results are a lot clearer and allow for early breakage of code. 
 * This hardens code to a certain degree and also gives performance improvements in case the operands are of different types.
+[JavaScript Equality and Comparisons](http://bonsaiden.github.com/JavaScript-Garden/#types.equality)
