@@ -139,3 +139,22 @@ active.render($html, function(){
 	accountNameInput = active.getComponent($html.find('#accountNameInput'));
 });
 ```
+### 2. Semicolon Insertion
+
+```javascript
+var bankCountriesArray = bankCountries.split(",")
+```
+It is highly recommended that you provide the necessary semicolons yourself. 
+This is because there are cases where the interpreter may make mistakes when inserting the semicolons. An example is...
+```javascript
+
+return
+	true;
+```	
+After Semicolon insertion, that will become...
+```javascript
+
+return;
+	true;
+```	
+[JavaScript Semicolon Insertion](http://www.openjs.com/articles/semicolon_insertion.php)
