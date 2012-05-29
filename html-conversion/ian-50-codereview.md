@@ -121,7 +121,7 @@ both evaluate to false
 
 ### 1. Initialize JQuery objects and Arch components in different location
 
-1 Initialize JQuery objects after locale parse, before render complete
+* Initialize JQuery objects after locale parse, before render complete
 
 ```javascript
 html = active.localize.parse(html);
@@ -131,9 +131,11 @@ var $paymentAccountSettingsContent = $html.find('#paymentAccountSettingsContent'
 var $editPrimaryAccountContentHeader = $html.find('#editPrimaryAccountContentHeader');
 var $addAccountContentHeader = $html.find('#addAccountContentHeader');
 ```
-2 Initialize Arch components after render complete
+* Initialize Arch components after render complete
 
 ```javascript
-form = active.getComponent($html.find('#paymentAccountForm'));
-accountNameInput = active.getComponent($html.find('#accountNameInput'));
+active.render($html, function(){
+	form = active.getComponent($html.find('#paymentAccountForm'));
+	accountNameInput = active.getComponent($html.find('#accountNameInput'));
+});
 ```
