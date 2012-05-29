@@ -158,3 +158,25 @@ return;
 	true;
 ```	
 [JavaScript Semicolon Insertion](http://www.openjs.com/articles/semicolon_insertion.php)
+
+### 3. Strictly equlity
+```javascript
+0            ==   ""            // true
+0            ==   "0"           // true
+false        ==   "0"           // true
+false        ==   null          // false
+null         ==   undefined     // true
+```
+* The use of == is widely regarded as bad practice. 
+* It introduces hard-to-track-down bugs due to its complicated conversion rules.
+ 
+
+```javascript
+0            ===   ""            // false
+0            ===   "0"           // false
+false        ===   "0"           // false
+false        ===   null          // false
+null         ===   undefined     // false
+```
+* The above results are a lot clearer and allow for early breakage of code. 
+* This hardens code to a certain degree and also gives performance improvements in case the operands are of different types.
